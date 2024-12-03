@@ -36,6 +36,5 @@ public class LigneCmdController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(ligneCmd);
-
     }
 }
