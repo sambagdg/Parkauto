@@ -14,15 +14,27 @@ public class Voiture extends Vehicule{
     @Column(name = "CATEGORIE")
     private String categorie;
     @Column(name = "NBPORTE")
-    private String nbPortes;
+    private int nbPortes;
     @Column(name = "POIDSTOTAL")
-    private String poidsTotal;
+    private int poidsTotal;
     @Column(name = "MEDIA")
     private String media;
 
     public Voiture() {
         super();
     }
+
+
+    public Voiture(String immatriculation, String puisanceFiscale, String categorie, int nbPortes,int poidsTotal, String media) {
+        super();
+        this.immatriculation = immatriculation;
+        this.puisanceFiscale = puisanceFiscale;
+        this.categorie = categorie;
+        this.nbPortes = nbPortes;
+        this.poidsTotal = poidsTotal;
+        this.media = media;
+    }
+
 
     public String getImmatriculation() {
         return immatriculation;
@@ -42,22 +54,27 @@ public class Voiture extends Vehicule{
     public void setCategorie(String categorie) {
         this.categorie = categorie;
     }
-    public String getNbPortes() {
-        return nbPortes;
-    }
-    public void setNbPortes(String nbPortes) {
-        this.nbPortes = nbPortes;
-    }
-    public String getPoidsTotal() {
-        return poidsTotal;
-    }
-    public void setPoidsTotal(String poidsTotal) {
-        this.poidsTotal = poidsTotal;
-    }
+
     public String getMedia() {
         return media;
     }
     public void setMedia(String media) {
         this.media = media;
+    }
+
+    public int getNbPortes() {
+        return nbPortes;
+    }
+
+    public void setNbPortes(int nbPortes) {
+        this.nbPortes = nbPortes;
+    }
+
+    public int getPoidsTotal() {
+        return poidsTotal;
+    }
+
+    public void setPoidsTotal(int poidsTotal) {
+        this.poidsTotal = poidsTotal;
     }
 }

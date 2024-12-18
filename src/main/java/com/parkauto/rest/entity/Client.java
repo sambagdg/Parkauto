@@ -30,9 +30,9 @@ public class Client implements Serializable {
     @OneToMany(mappedBy = "client")
     private List<Commande>commandeList;
 
+
     @ManyToMany(mappedBy = "clientList")
     private List<Location> locationList;
-
 
     public Client() {
         super();

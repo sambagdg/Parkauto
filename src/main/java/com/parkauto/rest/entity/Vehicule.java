@@ -20,6 +20,13 @@ public class Vehicule implements Serializable {
     @Column(name = "PRIX")
     private double prix;
 
+    @Column(name = "IMAGEVEHICULE")
+    private String imageVehicule;
+
+    @Column(name = "DESCRIPTION")
+    private String description;
+
+
     public Vehicule() {
     }
 
@@ -27,6 +34,21 @@ public class Vehicule implements Serializable {
         this.matricule = matricule;
         this.anneeModel = anneeModel;
         this.prix = prix;
+    }
+
+    public Vehicule(Long matricule, int anneeModel, double prix, String imageVehicule) {
+        this.matricule = matricule;
+        this.anneeModel = anneeModel;
+        this.prix = prix;
+        this.imageVehicule = imageVehicule;
+    }
+
+    public Vehicule(Long matricule, int anneeModel, double prix, String imageVehicule, String description) {
+        this.matricule = matricule;
+        this.anneeModel = anneeModel;
+        this.prix = prix;
+        this.imageVehicule = imageVehicule;
+        this.description = description;
     }
 
     public Long getMatricule() {
@@ -51,6 +73,22 @@ public class Vehicule implements Serializable {
 
     public void setPrix(double prix) {
         this.prix = prix;
+    }
+
+    public String getImageVehicule() {
+        return imageVehicule;
+    }
+
+    public void setImageVehicule(String imageVehicule) {
+        this.imageVehicule = imageVehicule;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
